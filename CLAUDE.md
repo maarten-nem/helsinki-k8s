@@ -25,7 +25,7 @@ helsinki-k8s/
 1. Create directory `X_Y/` for exercise X.Y
 2. Add application code, Dockerfile, and README.md
 3. Add GitHub Actions workflow `.github/workflows/build-X_Y.yml`
-4. Update `README.md` to add a link: `- [X.Y.](X_Y/)`
+4. Update `README.md` to add a link: `- [X.Y](X_Y/)`
 5. Commit with message: `feat: complete exercise X.Y`
 6. When the exercise is complete, create a GitHub release with tag `X.Y`
 
