@@ -6,4 +6,4 @@ Exercise submissions for the [DevOps with Kubernetes](https://devopswithkubernet
 
 ### Part 1
 
-- [1.1.](1_1/)
+- [1.1](1_1/)
