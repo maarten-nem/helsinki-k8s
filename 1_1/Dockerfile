@@ -3,9 +3,7 @@
 # Exists to produce a minimal container for k8s-random-string.
 # RELEVANT FILES: Cargo.toml, src/main.rs
 
-# -----------------------------------------------------------------------------
 # stage 1: build release binary (Alpine/musl)
-# -----------------------------------------------------------------------------
 FROM rust:1-alpine AS builder
 
 # musl-dev required for linking when targeting x86_64-unknown-linux-musl
@@ -27,9 +25,7 @@ COPY src ./src
 # overwrite dummy and build real binary (deps already cached)
 RUN touch src/main.rs && cargo build --release --target x86_64-unknown-linux-musl
 
-# -----------------------------------------------------------------------------
 # stage 2: minimal runtime (Alpine)
-# -----------------------------------------------------------------------------
 FROM alpine:3.19
 
 WORKDIR /app
