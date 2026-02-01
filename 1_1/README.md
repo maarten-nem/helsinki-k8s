@@ -1,17 +1,17 @@
-# k8s-random-string
+# log-output
 
 Prints a timestamp and random UUID every 5 seconds.
 
 ## Build
 
 ```bash
-docker build -t k8s-random-string .
+docker build -t log-output .
 ```
 
 ## Run
 
 ```bash
-docker run k8s-random-string
+docker run log-output
 ```
 
 ## Deploy
