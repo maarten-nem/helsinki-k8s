@@ -111,7 +111,7 @@ dependencies = [
 ]
 
 [[package]]
-name = "k8s-random-string"
+name = "log-output"
 version = "0.1.0"
 dependencies = [
  "chrono",

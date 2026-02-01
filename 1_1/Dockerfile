@@ -1,6 +1,6 @@
-# k8s-random-string/Dockerfile
+# log-output/Dockerfile
 # Multi-stage build: compile Rust binary then run in minimal image.
-# Exists to produce a minimal container for k8s-random-string.
+# Exists to produce a minimal container for log-output.
 # RELEVANT FILES: Cargo.toml, src/main.rs
 
 # stage 1: build release binary (Alpine/musl)
@@ -30,10 +30,10 @@ FROM alpine:3.19
 
 WORKDIR /app
 
-COPY --from=builder /app/target/x86_64-unknown-linux-musl/release/k8s-random-string /app/k8s-random-string
+COPY --from=builder /app/target/x86_64-unknown-linux-musl/release/log-output /app/log-output
 
 # run as non-root
 RUN adduser -D -u 1000 app && chown -R app:app /app
 USER app
 
-ENTRYPOINT ["/app/k8s-random-string"]
+ENTRYPOINT ["/app/log-output"]
